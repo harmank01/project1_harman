@@ -4,17 +4,22 @@
  */
 package cardgamep_1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author harma
  */
 public class CardGameP_1 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Player 1 name: ");
+        String player1Name = scanner.nextLine();
+        System.out.print("Enter Player 2 name: ");
+        String player2Name = scanner.nextLine();
+
+        CardGame game = new CardGame(player1Name, player2Name);
+        game.playGame();
+    }
 }
